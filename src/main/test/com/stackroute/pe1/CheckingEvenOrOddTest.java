@@ -18,14 +18,14 @@ public class CheckingEvenOrOddTest {
     }
 
     @Test
-    public  void givenNumberShouldReturnnullMessage(){
+    public  void givenNumberShouldReturnStringlMessage(){
         //arrange
 
         //Act
-        String result =evenorodd.odd(33);
+        String result =evenorodd.isEvenOrOdd(33);
 
         //Assert
-        assertEquals(null,result);
+        assertNotEquals("Jerry",result);
     }
 
     @Test
@@ -33,7 +33,7 @@ public class CheckingEvenOrOddTest {
         //arrange
 
         //Act
-        String result =evenorodd.odd(22);
+        String result =evenorodd.isEvenOrOdd(22);
 
         //Assert
         assertEquals("Jerry",result);
@@ -43,10 +43,20 @@ public class CheckingEvenOrOddTest {
         //arrange
 
         //Act
-        String result =evenorodd.odd(23);
+        String result =evenorodd.isEvenOrOdd(23);
 
         //Assert
         assertEquals("Tom",result);
+    }
+    @Test
+    public  void givenNegativeNumberShouldReturnNullMessage(){
+        //arrange
+
+        //Act
+        String result =evenorodd.isEvenOrOdd(-23);
+
+        //Assert
+        assertNull(null,result);
     }
 
 

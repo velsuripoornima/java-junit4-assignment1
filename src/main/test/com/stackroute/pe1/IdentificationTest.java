@@ -20,7 +20,7 @@ public class IdentificationTest {
     public void givenStringShouldReturnSmallLetterMessage(){
         //Arrange
         //Act
-        String result=identification.classify("a");
+        String result=identification.classifyCharactor("a");
         //Assert
         assertEquals("a is Small letter",result);
     }
@@ -28,7 +28,7 @@ public class IdentificationTest {
     public void givenStringShouldReturnCapitallLetterMessage(){
         //Arrange
         //Act
-        String result=identification.classify("A");
+        String result=identification.classifyCharactor("A");
         //Assert
         assertEquals("A is Capital letter",result);
     }
@@ -36,7 +36,7 @@ public class IdentificationTest {
     public void givenStringShouldReturnSymbolMessage(){
         //Arrange
         //Act
-        String result=identification.classify("@");
+        String result=identification.classifyCharactor("@");
         //Assert
         assertEquals("@ is Symbol",result);
     }
@@ -44,8 +44,16 @@ public class IdentificationTest {
     public void givenStringShouldReturnErrorMessage(){
         //Arrange
         //Act
-        String result=identification.classify("5");
+        String result=identification.classifyCharactor("5");
         //Assert
         assertEquals("5 is number",result);
+    }
+    @Test
+    public void givenNegativeStringShouldReturnErrorMessage(){
+        //Arrange
+        //Act
+        String result=identification.classifyCharactor("-5");
+        //Assert
+        assertNotEquals("5 is number",result);
     }
 }

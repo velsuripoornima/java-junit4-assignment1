@@ -20,7 +20,7 @@ public class NumberIterationTest {
     public void givenNumberShouldReturnNumberRepeatMessage(){
         //Arrange
         //Act
-        String result=numberiteration.iteratnumber(2);
+        String result=numberiteration.iteratNumber(2);
         //Assert
         assertEquals("1 2 2",result);
     }
@@ -28,7 +28,7 @@ public class NumberIterationTest {
     public void givenNumberShouldReturnNoMessageReturn(){
         //Arrange
         //Act
-        String result=numberiteration.iteratnumber(0);
+        String result=numberiteration.iteratNumber(0);
         //Assert
         assertEquals("",result);
     }
@@ -36,7 +36,7 @@ public class NumberIterationTest {
     public void givenNumberShouldReturnMessageReturn(){
         //Arrange
         //Act
-        String result=numberiteration.iteratnumber(-1);
+        String result=numberiteration.iteratNumber(-1);
         //Assert
         assertEquals("",result);
     }

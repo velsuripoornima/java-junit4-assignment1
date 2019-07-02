@@ -58,5 +58,22 @@ public class CheckConsonantsOrVowelTest {
         //Assert
         assertEquals("Vowel Consonant",result);
     }
+    @Test
+    public void givenNumericStringShouldReturnVowelsConsnantsMessage(){
+        //Arrange
+        //Act
+        String result=checkconsonantsorvowel.isVowel("23");
+        //Assert
+        assertNotEquals("Vowel Consonant",result);
+    }
+    @Test
+    public void givenNullStringShouldReturnNullMessage(){
+        //Arrange
+        //Act
+        String result=checkconsonantsorvowel.isVowel(null);
+        //Assert
+        assertNull(null,result);
+    }
+
 
 }

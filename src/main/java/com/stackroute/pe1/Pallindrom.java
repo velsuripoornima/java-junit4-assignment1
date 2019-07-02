@@ -8,13 +8,15 @@ public class Pallindrom {
         while (number > 0){ //condition
             remainder=number % 10;
             rev= rev * 10 + remainder;
-            if(remainder % 2 ==0)
+            if(remainder % 2 ==0) //checks the given number is even or odd
             sum=remainder + sum;
             number=number/10;
         }
 
-        if(rev==temp){
-            if(sum >25){
+        if(rev==temp)  //it checks reverse of a string is same as original string (if it sstisfies)
+        {
+            if(sum >25)  //it will check the sum of even numbers should be greater then 25 or not
+            {
                 return temp + " is palindrome and the sum of even numbers is greater than 25";
             }
             else {

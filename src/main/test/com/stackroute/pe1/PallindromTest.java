@@ -49,5 +49,15 @@ public class PallindromTest {
         //Assert
         assertEquals("234565432 is palindrome and sum of even numbers is less than 25",result);
     }
+    @Test
+    public  void givenNegativeNumberShouldReturnNumberIsNotAPalindromMessage(){
+        //arrange
+        Pallindrom palindrom=new Pallindrom();
+        //Act
+        String result = palindrom.CheckingPalindrom(-234565432);
+
+        //Assert
+        assertEquals("-234565432 is not palindrome",result);
+    }
 
 }

@@ -40,4 +40,12 @@ public class RepeatCharTest {
         //Arrange
         assertEquals("",result);
     }
+    @Test
+    public void givenNullStringOneNegativeNumberShouldReturnResultMessage(){
+        //Arrange
+        //Act
+        String result=repeatchar.repeat(null,-2);
+        //Arrange
+        assertNull(null,result);
+    }
 }

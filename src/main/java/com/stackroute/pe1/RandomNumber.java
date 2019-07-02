@@ -12,9 +12,11 @@ public class RandomNumber {
 //        while (number != usernumber){
 //            System.out.println("enter your guessing number:");
 //            usernumber=scanner.nextInt();
-        if(usernumber>=1 && usernumber<=50){
+        if(usernumber>=1 && usernumber<=50) //it checks the number is between 1 to 50 or not
+        {
 
-            if (number > usernumber) {
+            if (number > usernumber)  //if above if condition satisfies it will check the number is greater to user input or not
+            {
                 return "your guessing number is less than original number";
             } else if (number < usernumber) {
                 return "your guessing number is greater than original number";
@@ -23,7 +25,7 @@ public class RandomNumber {
 //                break;
             }
 
-        }return null;
+        }return null;  // the above if condition not satisfies it return null value
 
     }
 }

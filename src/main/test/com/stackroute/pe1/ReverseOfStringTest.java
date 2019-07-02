@@ -42,11 +42,20 @@ public class ReverseOfStringTest {
         assertEquals("reverse string is:54321",result);
     }
     @Test
-    public void givenNullStringShouldReturnReverseStringMessage(){
+    public void givenEmptyStringShouldReturnReverseStringMessage(){
         //Arrange
         //Act
         String result=reverseofstring.reverse("");
         //Assert
         assertEquals("reverse string is:",result);
     }
+    @Test
+    public void givenNullStringShouldReturnNullMessage(){
+        //Arrange
+        //Act
+        String result=reverseofstring.reverse(null);
+        //Assert
+        assertNull(null,result);
+    }
+
 }
